@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Web制作会社 Sample Webのリクルートサイト"
+    />
+    <!-- ファビコン -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Web</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <!-- リセットCSSを先に読み込ませる -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    />
+    <!-- googleフォント -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Chartist.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css"
+    />
+    <!-- CSSファイル -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ここからheader -->
+    <header>
+      <!-- 全体をラップする -->
+      <div class="wrapper">
+        <h1>
+          <a href="index.html">
+            <img class="logo" src="/images/logo.svg" alt="web制作会社" />
+          </a>
+        </h1>
+        <nav>
+          <ul class="main-nav">
+            <li>
+              <a class="current menu-home" href="index.html"> ホーム </a>
+            </li>
+            <li>
+              <a class="menu-job" href="job.html">募集要項 </a>
+            </li>
+            <li>
+              <a class="menu-form" href="form.html">応募</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- headerはここまで -->
+
+    <!-- ここからsection -->
+    <!-- テーマをもったグループを作る -->
+    <section class="home-hero wrapper">
+      <!-- wrapperで包む -->
+      <h2>一緒に挑戦し続けよう</h2>
+      <p>
+        私たちと一緒にWebの未来を作りませんか？素敵な仲間を募集しています。
+        「なりたい自分」になれる場所を、きっと見つけられるはずです。
+      </p>
+      <a class="btn btn-primary" href="job.html">募集要項を見る</a>
+    </section>
+    <!-- 第１sectionここまで -->
+
+    <!-- 第２sectionここから -->
+    <section class="brown-bg">
+      <!-- 横に並べたい文章部分とグラフをcontentクラスで囲む -->
+      <div class="wrapper content flex-reverse">
+        <!-- text系をまとめているclass -->
+        <div class="home-text">
+          <h2 class="title">Webデザイナーの活躍する職場です</h2>
+          <p>
+            制作チームではWebデザイナーが一番多く在籍しています。
+            ただ機能する制作物を作るのではなく、使い勝手がよく美しいものを生み出していきます。
+            あなたも、誰かの世界が変わるようなクリエイティブなWebサイトを
+            世界中に広めませんか？
+          </p>
+        </div>
+        <!-- text系をまとめているclassここまで -->
+        <!-- ここからグラフ部分 -->
+        <div class="home-chart">
+          <div class="pie-chart"></div>
+        </div>
+      </div>
+    </section>
+    <!-- 第３sectionここから -->
+    <section class="wrapper content">
+      <div class="home-text">
+        <h2 class="title">あなたの生活に合わせたスタイルで働けます</h2>
+        <p>
+          弊社では東京、大阪のオフィスの他、リモート勤務も可能です。
+          リモート勤務で活躍している社員は全体の3分の1となり、年々増加しています。
+          自宅やコワーキングスペースなど、あなたの一番集中できる場所で仕事に取り組んでください。
+        </p>
+      </div>
+      <div class="home-chart">
+        <div class="bar-chart"></div>
+        <p>リモート社員数の推移</p>
+      </div>
+    </section>
+    <!-- 第３sectionここまで -->
+
+    <!-- ここからフッター -->
+    <footer>
+      <a href="job.html" class="btn btn-secondary"> 募集要項を見る </a>
+      <ul class="footer-nav">
+        <li>
+          <a href="#">会社概要</a>
+        </li>
+        <li>
+          <a href="#">サービス内容</a>
+        </li>
+        <li>
+          <a href="#">スタッフブログ</a>
+        </li>
+        <li>
+          <a href="#">お問い合わせ</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

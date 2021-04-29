@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Web制作会社 Sample Webのリクルートサイト"
+    />
+    <!-- ファビコン -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>応募</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/destyle.css@1.0.5/destyle.css"
+    />
+    <!-- リセットCSSを先に読み込ませる -->
+
+    <!-- フォントオーサム -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <!-- googleフォント -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="job/job.css" />
+    <link rel="stylesheet" href="form/form.css" />
+  </head>
+  <body class="page-form">
+    <!-- ここからヘッダー -->
+    <header>
+      <div class="wrapper">
+        <h1>
+          <a href="index.html">
+            <img class="logo" src="images/logo.svg" alt="sample web" />
+          </a>
+        </h1>
+        <nav>
+          <ul class="nav-menu">
+            <li>
+              <a class="menu-home" href="index.html">ホーム</a>
+            </li>
+            <li>
+              <a class="menu-job" href="job.html">募集要項</a>
+            </li>
+            <li>
+              <a class="menu-form" href="form.html">応募</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ヘッダーここまで -->
+
+    <!-- ここからメイン -->
+    <main>
+      <h2 class="title title-center">応募フォーム</h2>
+      <p>下記の応募フォームにすべてご記入の上、送信してください。</p>
+      <p class="text-small">
+        ※ファイルの添付はできません。作品のファイルがある場合は必ずアップロードしたURLをご記入ください。
+      </p>
+      <form>
+        <table>
+          <tbody>
+            <tr>
+              <th>お名前</th>
+              <td>
+                <input type="text" placeholder="例：大本真奈美" />
+              </td>
+            </tr>
+            <tr>
+              <th>フリガナ</th>
+              <td>
+                <input type="text" placeholder="例：オオモトマナミ" />
+              </td>
+            </tr>
+            <tr>
+              <th>メールアドレス</th>
+              <td>
+                <input type="email" placeholder="例：hello@example.com" />
+              </td>
+            </tr>
+            <tr>
+              <th>ポートフォリオ</th>
+              <td>
+                <input type="url" placeholder="例：https://example.com" />
+              </td>
+            </tr>
+            <tr>
+              <th>希望勤務地</th>
+              <td>
+                <label>
+                  <input type="checkbox" />
+                  <span>東京</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>大阪</span>
+                </label>
+                <label>
+                  <input type="checkbox" />
+                  <span>リモート勤務</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <th>現在の状態</th>
+              <td>
+                <div class="select-box">
+                  <select name="current-position">
+                    <option value="会社に在籍中">会社に在籍中</option>
+                    <option value="フリーランス">フリーランス</option>
+                    <option value="学生">学生</option>
+                    <option value="休職中">休職中</option>
+                  </select>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>自己PR</th>
+              <td>
+                <textarea
+                  placeholder="例：これまでの経歴、学んできたこと、今取り組んでいるプロジェク等"
+                ></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- ----------------------------------- -->
+        <p class="text-center">
+          <input type="submit" class="btn btn-primary" value="送信する" />
+        </p>
+      </form>
+    </main>
+    <!-- ここまでメイン -->
+
+    <!-- ここからフッター -->
+    <footer>
+      <ul class="footer-nav">
+        <li>
+          <a href="#">会社概要</a>
+        </li>
+        <li>
+          <a href="#">サービス内容</a>
+        </li>
+        <li>
+          <a href="#">スタッフブログ</a>
+        </li>
+        <li>
+          <a href="#">お問い合わせ</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- ここまでフッター -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

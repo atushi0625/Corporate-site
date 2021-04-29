@@ -1,0 +1,305 @@
+@charset 'UTF-8';
+
+$ds: 600px;
+$color: #f8f6f2;
+
+@mixin ds-size {
+     @media (min-width:$ds) {
+          //600px以上になったらサイズ変更
+          @content
+     }
+}
+
+
+body {
+     background-image: url(../images/bg-job.jpg);
+     background-position: left 106px, 0 0;
+     background-size: 70vw auto, contain;
+     background-repeat: no-repeat;
+     color: #555;
+     font-family: sans-serif;
+}
+
+// ヘッダー
+
+.wrapper {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     max-width: 1200px;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 1rem;
+
+     h1 {
+          width: 7.5rem;
+
+          @include ds-size {
+               width: 12.5rem;
+          }
+     }
+}
+
+.nav-menu {
+     display: flex;
+
+     li {
+          text-align: center;
+     }
+
+     a {
+          display: block;
+          padding: .5rem;
+
+          &:before {
+               display: block;
+               color: #555;
+               font-family: "Font Awesome 5 Free";
+               font-size: 1.25rem;
+               font-weight: 900;
+               margin-bottom: .25rem;
+
+
+          }
+
+     }
+}
+
+.menu-home {
+     &:before {
+          content: '\f015';
+     }
+}
+
+.menu-job {
+     &:before {
+          content: '\f0ca'
+     }
+}
+
+.menu-form {
+     &:before {
+          content: '\f56e';
+     }
+}
+
+
+/*メイン*/
+main {
+     max-width: 900px;
+     width: 94%;
+     margin: 6.25rem auto;
+     padding: 3rem 2rem;
+     background: #fff;
+     box-shadow: 0 0 6px rgb(0 0 0 / 20%);
+}
+
+p,
+td {
+     line-height: 1.7;
+}
+
+.title {
+     line-height: 1.5;
+     font-family: 'Sawarabi Mincho', sans-serif;
+     font-size: 1.5rem;
+
+     &:after {
+          content: '';
+          display: block;
+          height: 5px;
+          width: 10rem;
+          background: #d0bea2;
+          margin: 2rem 0 2.5rem;
+     }
+}
+
+.title-center {
+     text-align: center;
+
+     &:after {
+          margin: 2.5rem auto;
+     }
+}
+
+// 表、データ
+table {
+     margin: 3.5rem 0;
+     width: 100%;
+}
+
+
+th {
+     font-weight: normal;
+     background: $color;
+     vertical-align: middle;
+     padding: 1rem;
+
+     td {
+          padding: .75rem 1rem 1.75rem;
+     }
+}
+
+th,
+td {
+     display: block;
+}
+
+// 応募フォームボタン
+.text-center {
+     text-align: center;
+
+     .btn {
+          margin-bottom: 4rem;
+     }
+}
+
+
+// タイムライン
+.timeline {
+     font-family: 'Sawarabi Mincho', sans-serif;
+     list-style: decimal inside;
+}
+
+.timeline-item {
+     margin-bottom: 2rem;
+
+     .timeline-title {
+          font-size: 1.375rem;
+          display: inline-block;
+          margin-bottom: 1rem;
+     }
+
+     .timeline-content {
+          font-family: sans-serif;
+     }
+}
+
+
+// レスポンシブ
+@include ds-size {
+     header {
+
+          .wrapper {
+               padding: 2rem 1rem;
+          }
+
+          li {
+               margin-left: 2rem;
+               font-family: 'Sawarabi Mincho', sans-serif;
+               font-size: 1.25rem;
+          }
+
+          a {
+               width: auto;
+
+          }
+
+          .menu-home {
+               &:before {
+                    content: '';
+               }
+
+          }
+
+          .menu-job {
+               &:before {
+                    content: '';
+               }
+
+
+          }
+
+
+          .menu-form {
+               &:before {
+                    content: '';
+               }
+          }
+
+     }
+
+     /*ここからメイン*/
+     main {
+          padding: 5rem;
+     }
+
+     .title {
+          font-size: 1.875rem;
+     }
+
+     th,
+     td {
+          padding: 1.25rem;
+          display: table-cell; //デフォルト値
+     }
+
+     th {
+          width: 24%;
+          vertical-align: middle; //ブロック要素には使えない
+          //インライン要素、インラインブロック要素、表のセル要素にだけ適用される
+     }
+
+     tr:nth-child(odd) {
+          background: $color;
+
+     }
+
+     tr:nth-child(even) th {
+          background: #fff;
+     }
+
+     .timeline-item {
+          display: flex;
+          margin-bottom: 0;
+
+          .timeline-title {
+               width: 24%;
+               padding: 2rem 2.5rem 2rem 0;
+               text-align: right;
+          }
+
+          .timeline-content {
+               border-left: 5px solid #f8f6f2;
+               width: 76%;
+               padding: 1.5rem 0 1.5rem 2.5rem;
+               position: relative;
+
+               &:before {
+                    display: block;
+                    position: absolute;
+                    background: #d0bea2;
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    text-align: center;
+                    padding: 0.1rem;
+                    top: 1.5rem;
+                    left: -1.5rem;
+                    //  FontAwesomeの追加
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    color: #fff;
+                    font-size: 1.25rem;
+               }
+          }
+
+          .icon-file::before {
+               content: '\f56e';
+          }
+
+          .icon-code::before {
+               content: '\f121';
+          }
+
+          .icon-chat::before {
+               content: '\f086';
+          }
+
+          .icon-hands::before {
+               content: '\f2b5';
+          }
+     }
+
+
+
+}
